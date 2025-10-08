@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from datetime import datetime, timedelta
 
 
 # Create your views here.
@@ -16,11 +17,18 @@ def dashboard(request):
 
 
 data = {
-    "title": "Welcome to Django Templates Contex Feature",
+    "title": "The quick brown fox jumps over the lazy dog",
+    "name": "habibur",
     "word": "Django Templates Contex Feature",
-    "sentence": "This is a simple Django Template"
+    "sentence": "This is a simple Django Template",
+    "number": "1234567890",
+    "list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "my_dict": {"name": "habibur", "age": 25, "city": "Lahore"},
+    "my_html": "<h1>Hello World!</h1>"
 }
 
 
 def about(request):
-    return render(request, 'about.html', data)
+    context = data.copy()
+    context["current_date"] = datetime.now()
+    return render(request, 'about.html', context)

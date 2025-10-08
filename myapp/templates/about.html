@@ -1,13 +1,55 @@
+{% load tz %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>About</title>
+    <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">
 </head>
 <body>
-<h1>About</h1>
-<h2>{{ title }}</h2>
-<p>{{ word }}</p>
-{#<p>{{ sentence }}</p>#}
+<h1>About Page</h1>
+<br>
+<h1>Text Filters</h1>
+<h2>{{ title|capfirst }}</h2>
+<h2>{{ title|lower }}</h2>
+<h2>{{ title|upper }}</h2>
+<h2>{{ title|title }}</h2>
+<h2>{{ name|truncatechars:3 }}</h2>
+<h2>{{ title|truncatewords:3 }}</h2>
+<h2>{{ title|wordcount }}</h2>
+<h2>{{ title|length }}</h2>
+<h2>{{ title|linebreaks }}</h2>
+<h2>{{ title|linebreaksbr }}</h2>
+<h2>{{ my_html|safe }}</h2>
+<h2>{{ my_html|escape }}</h2>
+<h2>{{ title|slugify  }}</h2>
+<h2>{{ title|urlencode  }}</h2>
+<h2>{{ my_html|striptags  }}</h2>
+
+<h1>Date & Time Filters</h1>
+<h2>{{ current_date|date:"Y-m-d" }}</h2>
+<h2>{{ current_date|time:"H:i:s" }}</h2>
+<h2>{{ current_date|timesince }}</h2>
+<h2>{{ current_date|timeuntil }}</h2>
+<h2>{{ current_date|localtime }}</h2>
+<h2>{{ current_date|utc }}</h2>
+
+<h2>Number Filters</h2>
+<h2>{{ 10|add:5 }}</h2>
+<h2>{{ 100| divisibleby:3  }}</h2>
+<h2>{{ 102400|filesizeformat  }}</h2>
+<h2>{{ 12.3456|floatformat:2 }}</h2>
+<h2>{{ number|length }}</h2>
+<h2>{{ number|random }}</h2>
+
+<h2>List Filters</h2>
+<h2>{{ list|first }}</h2>
+<h2>{{ list|last }}</h2>
+<h2>{{ list|length }}</h2>
+<h2>{{ list|random }}</h2>
+<h2>{{ list|join:" - " }}</h2>
+<h2>{{ list|slice:"3" }}</h2>
+
+
 </body>
 </html>
