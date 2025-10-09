@@ -24,7 +24,16 @@ data = {
     "number": "1234567890",
     "list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     "my_dict": {"name": "habibur", "age": 25, "city": "Lahore"},
-    "my_html": "<h1>Hello World!</h1>"
+    "my_html": "<h1><i>Hello World!</i></h1>",
+    "my_date": datetime.now() - timedelta(days=365),
+    "my_string": "alert('hello');",
+    "my_var": None,
+    "is_bangladeshi": True,
+
+    "my_dict_list": [{"name": "habibur", "age": 15, "city": "Dhaka"},
+                     {"name": "ali", "age": 25, "city": "Khulna"},
+                     {"name": "hassan", "age": 35, "city": "Jessore"},
+                     ]
 }
 
 

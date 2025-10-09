@@ -10,6 +10,7 @@
 <h1>About Page</h1>
 <br>
 <h1>Text Filters</h1>
+<hr>
 <h2>{{ title|capfirst }}</h2>
 <h2>{{ title|lower }}</h2>
 <h2>{{ title|upper }}</h2>
@@ -27,14 +28,17 @@
 <h2>{{ my_html|striptags  }}</h2>
 
 <h1>Date & Time Filters</h1>
-<h2>{{ current_date|date:"Y-m-d" }}</h2>
-<h2>{{ current_date|time:"H:i:s" }}</h2>
-<h2>{{ current_date|timesince }}</h2>
-<h2>{{ current_date|timeuntil }}</h2>
-<h2>{{ current_date|localtime }}</h2>
-<h2>{{ current_date|utc }}</h2>
+<hr>
+<h2>{{ my_date }}</h2>
+<h2>{{ my_date|date:"Y-m-d" }}</h2>
+<h2>{{ my_date|time:"H:i:s" }}</h2>
+<h2>{{ my_date|timesince }}</h2>
+<h2>{{ my_date|timeuntil }}</h2>
+<h2>{{ my_date|localtime }}</h2>
+<h2>{{ my_date|utc }}</h2>
 
 <h2>Number Filters</h2>
+<hr>
 <h2>{{ 10|add:5 }}</h2>
 <h2>{{ 100| divisibleby:3  }}</h2>
 <h2>{{ 102400|filesizeformat  }}</h2>
@@ -42,13 +46,37 @@
 <h2>{{ number|length }}</h2>
 <h2>{{ number|random }}</h2>
 
+
 <h2>List Filters</h2>
+<hr>
 <h2>{{ list|first }}</h2>
 <h2>{{ list|last }}</h2>
 <h2>{{ list|length }}</h2>
 <h2>{{ list|random }}</h2>
 <h2>{{ list|join:" - " }}</h2>
 <h2>{{ list|slice:"3" }}</h2>
+
+<h1>Date & Time Filters</h1>
+<hr>
+<h2>{{ my_string|escapejs }}</h2>
+<h2>{{ my_html|escape }}</h2>
+<h2>{{ my_html|force_escape }}</h2>
+<h2>{{ my_html|safe }}</h2>
+
+<h1>Conditional Filters</h1>
+<hr>
+<h2>{{ my_var }}</h2>
+<h2>{{ my_var|default:"No Value" }}</h2>
+<h2>{{ my_var|default_if_none:"No Value" }}</h2>
+<h2>{{ my_var|default_if_none:"If no value" }}</h2>
+<h2>{{ is_bangladeshi|yesno:"Yes, No, Maybe" }}</h2>
+
+<h1>Dictionary Filters</h1>
+<hr>
+<h2>{{ my_dict_list }}</h2>
+<h2>{{ my_dict_list|dictsort:"name" }}</h2>
+<h2>{{ my_dict_list|dictsortreversed:"name" }}</h2>
+<h2>{{ my_dict_list|dictsort:"age" }}</h2>
 
 
 </body>
