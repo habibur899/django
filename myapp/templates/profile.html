@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+<h2>{{ title }}</h2>
+
+<h2>If Example</h2>
+
+{% if user.is_authenticated %}
+    <p>Hello {{ user.username }}</p>
+{% else %}
+    <p>Please log in</p>
+{% endif %}
+
+<h2>For Example</h2>
+<ul>
+    {% for product in products %}
+        <li>{{ product.name }} - {{ product.price }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
