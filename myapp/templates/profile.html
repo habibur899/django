@@ -21,5 +21,42 @@
         <li>{{ product.name }} - {{ product.price }}</li>
     {% endfor %}
 </ul>
+
+<h2>With Example</h2>
+
+{% with total_product=products|length %}
+    <p>Total products: {{ total_product|add:10 }}</p>
+{% endwith %}
+
+<h2>Include Example</h2>
+{% include "subview.html" %}
+
+<h2>Comment Example</h2>
+{% comment %}
+    <p>This is a comment</p>
+{% endcomment %}
+
+<h2>Verbatim Example</h2>
+{% verbatim %}
+{% include "subview.html" %}
+{% endverbatim %}
+
+<h2>Autoescape Example</h2>
+<p><b>This is autoescape</b></p>
+
+<h2>Cycle Example</h2>
+<ul>
+    {% for item in products %}
+        <li style="color:{% cycle 'red' 'green' 'blue' %}">{{ item.name }} - {{ item.price }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Csrf Example</h2>
+<form action="">
+    {% csrf_token %}
+    <input type="text" name="name">
+    <input type="submit" value="Submit">
+</form>
+
 </body>
 </html>

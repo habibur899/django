@@ -13,8 +13,14 @@ def profile(request):
         "user": {"is_authenticated": True, "username": "Habibur"},
         "title": "The quick brown fox jumps over the lazy dog",
         "products": [{"name": "Samsung Galaxy S21", "price": 75000},
-                    {"name": "Apple iPhone 14 Pro Max", "price": 80000},
-                    {"name": "Samsung Galaxy S22", "price": 90000}, ]
+                     {"name": "Apple iPhone 14 Pro Max", "price": 80000},
+                     {"name": "Samsung Galaxy S22", "price": 90000},
+                     {"name": "Apple iPhone 14 Pro", "price": 100000},
+                     {"name": "Samsung Galaxy S23", "price": 110000},
+                     {"name": "Apple iPhone 15 Pro", "price": 120000},
+                     {"name": "Samsung Galaxy S24", "price": 130000},
+                     {"name": "Apple iPhone 15 Pro Max", "price": 140000},
+                     ]
     }
 
     return render(request, 'profile.html', data)
