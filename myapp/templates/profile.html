@@ -58,5 +58,13 @@
     <input type="submit" value="Submit">
 </form>
 
+<h2>Debug Example</h2>
+{% comment %}
+{% debug %}
+{% endcomment %}
+
+<h2>Include Child View With Data</h2>
+{% include "subview1.html" with title=title %}
+{% include "subview2.html" with title=user %}
 </body>
 </html>
